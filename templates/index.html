@@ -1,0 +1,24 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание плейлиста</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Создание плейлиста</h1>
+    
+    <form action="#" method="post">
+        {% csrf_token %}
+        <input type="text" name="track_name" placeholder="Введите название трека">
+        <button type="submit">Добавить в плейлист</button>
+    </form>
+    
+    <h2>Плейлист:</h2>
+    <ul id="playlist">{{playlist}}</ul>
+
+
+
+</body>
+</html>
